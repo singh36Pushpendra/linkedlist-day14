@@ -36,6 +36,10 @@ public class LinkedList<T> {
 		}
 	}
 	
+	public void append(T item) {
+		addLast(item);
+	}
+	
 	public void display() {
 		Node temp = head;
 		while (temp != null) {
