@@ -56,9 +56,22 @@ public class LinkedList<T> {
 	
 	public void pop() {
 		if (head == null)
-			System.out.println("Can't delete item empty LinkedList!");
+			System.out.println("Can't delete item: Empty LinkedList!");
 		else
 			head = head.ref;
+	}
+	
+	public void popLast() {
+		if (head == null)
+			System.out.println("Can't delete item: Empty LinkedList");
+		else if (head.ref == null)
+			head = null;
+		else {
+			Node temp = head;
+			while (temp.ref.ref != null)
+				temp = temp.ref;
+			temp.ref = null;
+		}
 	}
 
 	public void display() {

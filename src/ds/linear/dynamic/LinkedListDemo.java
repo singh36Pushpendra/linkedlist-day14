@@ -7,7 +7,6 @@ public class LinkedListDemo {
 		integers.addLast(56);
 		integers.addLast(30);
 		integers.addLast(70);
-		integers.display();
 		
 		LinkedList<Integer> integers2 = new LinkedList<Integer>();
 		integers2.addFirst(70);
@@ -38,6 +37,13 @@ public class LinkedListDemo {
 		System.out.print("Linked List: ");
 		integers4.display();
 		
+		System.out.println("\nIntegers before deleting: ");
+		integers.display();
+		
+		integers.popLast();
+		System.out.println("\nAfter deleting last element: ");
+		System.out.print("Linked List: ");
+		integers.display();
 	}
 
 }
