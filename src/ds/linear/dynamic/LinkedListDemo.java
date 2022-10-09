@@ -32,6 +32,12 @@ public class LinkedListDemo {
 		
 		System.out.print("LinkedList sequence after inserting: ");
 		integers4.display();
+		
+		integers4.pop();
+		System.out.println("\nAfter deleting first element: ");
+		System.out.print("Linked List: ");
+		integers4.display();
+		
 	}
 
 }

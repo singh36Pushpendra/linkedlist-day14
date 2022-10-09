@@ -53,6 +53,13 @@ public class LinkedList<T> {
 		newNode.ref = right;
 		left.ref = newNode;
 	}
+	
+	public void pop() {
+		if (head == null)
+			System.out.println("Can't delete item empty LinkedList!");
+		else
+			head = head.ref;
+	}
 
 	public void display() {
 		Node temp = head;
