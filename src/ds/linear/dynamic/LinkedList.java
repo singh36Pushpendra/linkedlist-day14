@@ -73,6 +73,16 @@ public class LinkedList<T> {
 			temp.ref = null;
 		}
 	}
+	
+	public boolean search(T item) {
+		Node temp = head;
+		while (temp != null) {
+			if (temp.item == item)
+				return true;
+			temp = temp.ref;
+		}
+		return false;
+	}
 
 	public void display() {
 		Node temp = head;

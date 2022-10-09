@@ -44,6 +44,11 @@ public class LinkedListDemo {
 		System.out.println("\nAfter deleting last element: ");
 		System.out.print("Linked List: ");
 		integers.display();
+		
+		if (integers2.search(30))
+			System.out.println("Element found!");
+		else
+			System.out.println("Element not found!");
 	}
 
 }
