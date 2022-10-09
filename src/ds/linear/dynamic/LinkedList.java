@@ -3,17 +3,17 @@ package ds.linear.dynamic;
 public class LinkedList<T> {
 
 	Node head;
-	
+
 	class Node {
 		T item;
 		Node ref;
-		
+
 		Node(T item) {
 			this.item = item;
 		}
-		
+
 	}
-	
+
 	public void addLast(T item) {
 		Node newNode = new Node(item);
 		if (head == null)
@@ -25,7 +25,7 @@ public class LinkedList<T> {
 			temp.ref = newNode;
 		}
 	}
-	
+
 	public void addFirst(T item) {
 		Node newNode = new Node(item);
 		if (head == null)
@@ -35,11 +35,25 @@ public class LinkedList<T> {
 			head = newNode;
 		}
 	}
-	
+
 	public void append(T item) {
 		addLast(item);
 	}
-	
+
+	public void insert(int pos, T item) {
+		Node left = head;
+		Node right = left.ref;
+		Node newNode = new Node(item);
+		int index = 0;
+		while (index < pos - 1) {
+			index++;
+			left = left.ref;
+			right = right.ref;
+		}
+		newNode.ref = right;
+		left.ref = newNode;
+	}
+
 	public void display() {
 		Node temp = head;
 		while (temp != null) {

@@ -25,6 +25,13 @@ public class LinkedListDemo {
 		System.out.print("LinkedList sequence after appending: ");
 		integers2.display();
 		
+		LinkedList<Integer> integers4 = new LinkedList<Integer>();
+		integers4.append(56);
+		integers4.append(70);
+		integers4.insert(1, 30);
+		
+		System.out.print("LinkedList sequence after inserting: ");
+		integers4.display();
 	}
 
 }
