@@ -14,7 +14,7 @@ public class LinkedList<T> {
 		
 	}
 	
-	public void add(T item) {
+	public void addLast(T item) {
 		Node newNode = new Node(item);
 		if (head == null)
 			head = newNode;
@@ -23,6 +23,16 @@ public class LinkedList<T> {
 			while (temp.ref != null)
 				temp = temp.ref;
 			temp.ref = newNode;
+		}
+	}
+	
+	public void addFirst(T item) {
+		Node newNode = new Node(item);
+		if (head == null)
+			head = newNode;
+		else {
+			newNode.ref = head;
+			head = newNode;
 		}
 	}
 	
