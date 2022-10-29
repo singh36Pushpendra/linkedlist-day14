@@ -36,6 +36,49 @@ public class LinkedList<T> {
 		}
 	}
 
+    public int size() {
+        int count = 0;
+
+        Node temp = head;
+        while (temp != null) {
+            count++;
+            temp = temp.ref;
+        }
+
+        return count;
+    }
+
+	public void remove(T item) {
+		// Assuming item already present in list.
+		
+		Node left = head;
+		if (left.ref == null) {
+			head = null;
+		}
+		else if (left.ref.ref == null) {
+			if (left.item.equals(item))
+				head = head.ref;
+			else
+				head.ref = null;
+		}
+		else {
+			if (left.item.equals(item))
+				head = head.ref;
+			else {
+				Node right = left.ref;
+				while (left.ref != null) {
+					if (left.ref.item.equals(item)) {
+						left.ref = right.ref;
+						return;
+					}
+					left = left.ref;
+					right = right.ref;
+				}
+			}
+		}
+	}
+
+	
 	public void append(T item) {
 		addLast(item);
 	}

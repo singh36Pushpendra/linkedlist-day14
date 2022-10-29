@@ -30,4 +30,17 @@ public class LinkedListTest {
 		
 		Assert.assertEquals(1, nums.index(30));
 	}
+	
+	@Test
+	public void sizeTest() {
+		LinkedList<Integer> nums;
+		nums = new LinkedList<Integer>();
+		nums.append(56);
+		nums.append(30);
+		nums.append(40);
+		nums.append(70);
+		nums.remove(40);
+		
+		Assert.assertEquals(3, nums.size());
+	}
 }

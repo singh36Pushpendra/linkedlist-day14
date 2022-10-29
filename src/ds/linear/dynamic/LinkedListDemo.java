@@ -58,6 +58,9 @@ public class LinkedListDemo {
 		int indexOf30 = nums.index(30);
 		nums.insert(indexOf30 + 1, 40);
 		nums.display();
+		
+		nums.remove(40);
+		System.out.println("Size of list after deleting 40: " + nums.size());
 	}
 
 }
