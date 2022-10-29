@@ -84,6 +84,21 @@ public class LinkedList<T> {
 		return false;
 	}
 
+	public int index(T item) {
+		// Assuming the item is in the list.
+		
+		Node temp = head;
+		int count = 0;
+		while (temp != null) {
+			if (temp.item.equals(item)) {
+				break;
+			}
+			count++;
+			temp = temp.ref;
+		}
+		return count;
+	}
+
 	public void display() {
 		Node temp = head;
 		while (temp != null) {

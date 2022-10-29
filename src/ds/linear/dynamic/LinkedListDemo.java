@@ -49,6 +49,15 @@ public class LinkedListDemo {
 			System.out.println("Element found!");
 		else
 			System.out.println("Element not found!");
+		
+		// Inserting 40 after 30.
+		LinkedList<Integer> nums = new LinkedList<>();
+		nums.append(56);
+		nums.append(30);
+		nums.append(70);
+		int indexOf30 = nums.index(30);
+		nums.insert(indexOf30 + 1, 40);
+		nums.display();
 	}
 
 }
