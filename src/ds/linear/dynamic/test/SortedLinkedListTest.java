@@ -2,17 +2,17 @@ package ds.linear.dynamic.test;
 
 import org.junit.Test;
 
-import ds.linear.dynamic.LinkedList;
+import ds.linear.dynamic.SortedLinkedList;
 import junit.framework.Assert;
 
 @SuppressWarnings("deprecation")
-public class LinkedListTest {
+public class SortedLinkedListTest {
 
 	
 	@Test
 	public void searchTest() {
-		LinkedList<Integer> nums;
-		nums = new LinkedList<Integer>();
+		SortedLinkedList<Integer> nums;
+		nums = new SortedLinkedList<Integer>();
 		nums.append(56);
 		nums.append(30);
 		nums.append(70);
@@ -22,8 +22,8 @@ public class LinkedListTest {
 	
 	@Test
 	public void indexTest() {
-		LinkedList<Integer> nums;
-		nums = new LinkedList<Integer>();
+		SortedLinkedList<Integer> nums;
+		nums = new SortedLinkedList<Integer>();
 		nums.append(56);
 		nums.append(30);
 		nums.append(70);
@@ -33,8 +33,8 @@ public class LinkedListTest {
 	
 	@Test
 	public void sizeTest() {
-		LinkedList<Integer> nums;
-		nums = new LinkedList<Integer>();
+		SortedLinkedList<Integer> nums;
+		nums = new SortedLinkedList<Integer>();
 		nums.append(56);
 		nums.append(30);
 		nums.append(40);
